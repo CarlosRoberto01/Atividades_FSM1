@@ -51,44 +51,59 @@ let contatos = [
   ];
   
 
-function filtraMensagensPeloAssuntoSuporteTecnico(){
-        const assuntoSuporteTecnico = contatos.filter(contato => contato.assunto === "Suporte Técnico");
+// function filtraMensagensPeloAssuntoSuporteTecnico(){
+//         const assuntoSuporteTecnico = contatos.filter(contato => contato.assunto === "Suporte Técnico");
 
-        assuntoSuporteTecnico.forEach(contato => {
-            console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
-        })
+//         assuntoSuporteTecnico.forEach(contato => {
+//             console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
+//         })
         
-        const numeroDeMensagens = assuntoSuporteTecnico.length;
+//         const numeroDeMensagens = assuntoSuporteTecnico.length;
 
-        console.log(`O numero de mensagens com o assunto suporte tecnico é de ${numeroDeMensagens}`);
-};
+//         console.log(`O numero de mensagens com o assunto suporte tecnico é de ${numeroDeMensagens}`);
+// };
 
-filtraMensagensPeloAssuntoSuporteTecnico();
+// filtraMensagensPeloAssuntoSuporteTecnico();
 
-function filtraMensagensPeloAssuntoDuvida(){
-        const assuntoDuvida = contatos.filter(contato => contato.assunto === "Dúvida");
+// function filtraMensagensPeloAssuntoDuvida(){
+//         const assuntoDuvida = contatos.filter(contato => contato.assunto === "Dúvida");
 
-        assuntoDuvida.forEach(contato => {
-            console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
-        })
+//         assuntoDuvida.forEach(contato => {
+//             console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
+//         })
         
-        const numeroDeMensagensDuvida = assuntoDuvida.length;
+//         const numeroDeMensagensDuvida = assuntoDuvida.length;
 
-        console.log(`O numero de mensagens com o assunto dúvida é de ${numeroDeMensagensDuvida}`);
-};
+//         console.log(`O numero de mensagens com o assunto dúvida é de ${numeroDeMensagensDuvida}`);
+// };
 
-filtraMensagensPeloAssuntoDuvida();
+// filtraMensagensPeloAssuntoDuvida();
 
-function filtraMensagensPeloAssuntoSugestao(){
-        const assuntoSugestao = contatos.filter(contato => contato.assunto === "Sugestão");
+// function filtraMensagensPeloAssuntoSugestao(){
+//         const assuntoSugestao = contatos.filter(contato => contato.assunto === "Sugestão");
 
-        assuntoSugestao.forEach(contato => {
-            console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
-        })
+//         assuntoSugestao.forEach(contato => {
+//             console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
+//         })
         
-        const numeroDeMensagensSugestao = assuntoSugestao.length;
+//         const numeroDeMensagensSugestao = assuntoSugestao.length;
 
-        console.log(`O numero de mensagens com o assunto suporte tecnico é de ${numeroDeMensagensSugestao}`);
-};
-Sugestão
-filtraMensagensPeloAssuntoSugestao();
+//         console.log(`O numero de mensagens com o assunto suporte tecnico é de ${numeroDeMensagensSugestao}`);
+// };
+
+// filtraMensagensPeloAssuntoSugestao();
+
+function filtraMensagensPorAssunto(assunto) {
+    const mensagensFiltradas = contatos.filter(contato => contato.assunto === assunto);
+
+    mensagensFiltradas.forEach(contato => {
+        console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
+    });
+
+    const numeroDeMensagens = mensagensFiltradas.length;
+    console.log(`O número de mensagens com o assunto "${assunto}" é de ${numeroDeMensagens}`);
+}
+
+filtraMensagensPorAssunto("Suporte Técnico");
+filtraMensagensPorAssunto("Dúvida");
+filtraMensagensPorAssunto("Sugestão");
