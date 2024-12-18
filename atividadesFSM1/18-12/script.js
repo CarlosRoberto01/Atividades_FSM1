@@ -62,4 +62,33 @@ function filtraMensagensPeloAssuntoSuporteTecnico(){
 
         console.log(`O numero de mensagens com o assunto suporte tecnico é de ${numeroDeMensagens}`);
 };
+
 filtraMensagensPeloAssuntoSuporteTecnico();
+
+function filtraMensagensPeloAssuntoDuvida(){
+        const assuntoDuvida = contatos.filter(contato => contato.assunto === "Dúvida");
+
+        assuntoDuvida.forEach(contato => {
+            console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
+        })
+        
+        const numeroDeMensagensDuvida = assuntoDuvida.length;
+
+        console.log(`O numero de mensagens com o assunto dúvida é de ${numeroDeMensagensDuvida}`);
+};
+
+filtraMensagensPeloAssuntoDuvida();
+
+function filtraMensagensPeloAssuntoSugestao(){
+        const assuntoSugestao = contatos.filter(contato => contato.assunto === "Sugestão");
+
+        assuntoSugestao.forEach(contato => {
+            console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
+        })
+        
+        const numeroDeMensagensSugestao = assuntoSugestao.length;
+
+        console.log(`O numero de mensagens com o assunto suporte tecnico é de ${numeroDeMensagensSugestao}`);
+};
+Sugestão
+filtraMensagensPeloAssuntoSugestao();
