@@ -48,8 +48,8 @@ let contatos = [
     { nome: "Ana Clara", email: "ana.clara@email.com", assunto: "Sugestão", mensagem: "Poderiam oferecer tutoriais em vídeo." },
     { nome: "Henrique", email: "henrique@email.com", assunto: "Suporte Técnico", mensagem: "A senha não é reconhecida ao logar." },
     { nome: "Érica", email: "erica@email.com", assunto: "Dúvida", mensagem: "Como faço para alterar meu endereço?" }
-  ];
-  
+];
+
 
 // function filtraMensagensPeloAssuntoSuporteTecnico(){
 //         const assuntoSuporteTecnico = contatos.filter(contato => contato.assunto === "Suporte Técnico");
@@ -57,7 +57,7 @@ let contatos = [
 //         assuntoSuporteTecnico.forEach(contato => {
 //             console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
 //         })
-        
+
 //         const numeroDeMensagens = assuntoSuporteTecnico.length;
 
 //         console.log(`O numero de mensagens com o assunto suporte tecnico é de ${numeroDeMensagens}`);
@@ -71,7 +71,7 @@ let contatos = [
 //         assuntoDuvida.forEach(contato => {
 //             console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
 //         })
-        
+
 //         const numeroDeMensagensDuvida = assuntoDuvida.length;
 
 //         console.log(`O numero de mensagens com o assunto dúvida é de ${numeroDeMensagensDuvida}`);
@@ -85,7 +85,7 @@ let contatos = [
 //         assuntoSugestao.forEach(contato => {
 //             console.log(`Nome: ${contato.nome}, Mensagem: ${contato.mensagem}`);
 //         })
-        
+
 //         const numeroDeMensagensSugestao = assuntoSugestao.length;
 
 //         console.log(`O numero de mensagens com o assunto suporte tecnico é de ${numeroDeMensagensSugestao}`);
@@ -101,6 +101,7 @@ function filtraMensagensPorAssunto(assunto) {
     });
 
     const numeroDeMensagens = mensagensFiltradas.length;
+    document.write(`O número de mensagens com o assunto "${assunto}" é de ${numeroDeMensagens}`);
     console.log(`O número de mensagens com o assunto "${assunto}" é de ${numeroDeMensagens}`);
 }
 
