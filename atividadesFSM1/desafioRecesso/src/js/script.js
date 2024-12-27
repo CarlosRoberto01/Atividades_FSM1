@@ -17,24 +17,37 @@ const btnNao = document.querySelector(".btn-nao");
 function gerarNumeroPalpite() {
    palpite = Math.floor((menorValor + maiorValor) / 2 );
    elementoNumeroPalpite.textContent = palpite;
-   tentativas++
+   tentativas++;
 };
-elementoNumeroPalpite.innerHTML = gerarNumeroPalpite();
 
 //Escutador de evento botoes
 
 btnMaior.addEventListener("click" , () => {
     menorValor = palpite + 1;
     gerarNumeroPalpite();
-})
+});
+
 btnMenor.addEventListener("click" , () => {
     maiorValor = palpite - 1;
     gerarNumeroPalpite();
-})
-btnCorreto.addEventListener("click" , () => {
-    alert(`Acertei o número ${palpite} em ${tentativas} tentativas!`)
-})
+});
 
+btnCorreto.addEventListener("click" , () => {
+    // const elementoPalpiteCorreto = document.getElementById("palpite-correto");
+    // elementoPalpiteCorreto.textContent = `<p>Acertei o número ${palpite} em ${tentativas} tentativas!</p>`;
+    alert(`Acertei o número ${palpite} em ${tentativas} tentativas!`);
+});
+
+btnSim.addEventListener("click" , () => {
+    menorValor = 1;
+    maiorValor = 100;
+    tentativas = 0;
+    gerarNumeroPalpite();
+});
+
+btnNao.addEventListener("click" , () => {
+    alert("Obrigado por jogar comigo! Até a proxima!");     
+});
 
 //cronometro
 let minutos = 0;
@@ -63,7 +76,7 @@ function atualizarCronometro(){
 function iniciarCronometro(){
     if (!intervalo) {
         intervalo = setInterval(atualizarCronometro, 1000);
-    }
+    };
 };
 //Função botao pausar
 function pausarCronometro(){
