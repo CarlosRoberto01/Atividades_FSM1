@@ -11,6 +11,4 @@ function gerarNumeroAleatorio() {
 const elementoNumeroAleatorio = document.getElementById('numero-aleatorio');
 elementoNumeroAleatorio .innerHTML = gerarNumeroAleatorio();
 
-//contador
-
 
