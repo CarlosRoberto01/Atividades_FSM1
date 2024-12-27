@@ -4,41 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/atlantico_curso/FSM1/atividades/atividadesFSM1/desafioRecesso/src/css/output.css">
+    <link rel="stylesheet" href="/atlantico_curso/FSM1/atividades/atividadesFSM1/desafioRecesso/src/css/style.css">
     <title>Desafio Recesso</title>
 </head>
 
 <body>
-    <main class="p-6 max-w-lg mx-auto bg-gray-50 rounded-xl shadow-lg space-y-6">
-        <h1 class="text-3xl font-bold underline text-center">Adivinhação Inteligente</h1>
-        <p>Pense em um número entre 1 e 100, e eu tentarei adivinhar. Vamos começar?</p>
+    <h1>Advinhação inteligente</h1>
 
-        <div class="p-4 bg-white rounded-xl shadow-md text-center" role="timer" aria-live="polite">
-            Contador: <span id="contador">00:00</span>
-        </div>
+    <p>Pense em um numero entre 1 e 100 que irei tentar advinhvar qual o número que você pensou. Vamos começar ?</p>
 
-        <div class="text-center">
-            <p>Você pensou no número <span id="numero-aleatorio" class="font-bold text-blue-600">50</span>?</p>
-        </div>
+    <p>Você pensou no número <span id="numero-aleatorio"></span> ?</p>
 
-        <div class="flex justify-center gap-4">
-            <button class="btn-maior px-4 py-2 bg-red-500 text-white rounded-lg"
-                aria-label="Número maior">Maior</button>
-            <button class="btn-menor px-4 py-2 bg-yellow-500 text-white rounded-lg"
-                aria-label="Número menor">Menor</button>
-            <button class="btn-correto px-4 py-2 bg-green-500 text-white rounded-lg"
-                aria-label="Número correto">Correto</button>
-        </div>
+    <button class="btn-maior">Maior</button>
+    <button class="btn-menor">Menor</button>
+    <button class="btn-correto">Correto</button>
 
-        <p class="text-center">Deseja jogar novamente?</p>
-        <div class="flex justify-center gap-4">
-            <button class=" px-4 py-2 bg-blue-700 text-white rounded-lg"
-                aria-label="Sim, jogar novamente">Sim</button>
-            <button class=" px-4 py-2 bg-red-700 text-white rounded-lg" aria-label="Não, finalizar">Não</button>
-        </div>
-    </main>
+    <p>Deseja jogar novamente?</p>
+    <button class="btn-sim">Sim</button>
+    <button class="btn-nao">Não</button>
 
+    <div>
+        <p>Cronômetro</p>
+        <span id="cronometro-minuto">00 :</span>
+        <span id="cronometro-segundo">00</span>
+    </div>
+    <script src="/atlantico_curso/FSM1/atividades/atividadesFSM1/desafioRecesso/src/js/script.js"></script>
 </body>
-<script src="/atlantico_curso/FSM1/atividades/atividadesFSM1/desafioRecesso/assets/js/script.js"></script>
 
 </html>

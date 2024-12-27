@@ -9,6 +9,12 @@ function gerarNumeroAleatorio() {
 };
 
 const elementoNumeroAleatorio = document.getElementById('numero-aleatorio');
-elementoNumeroAleatorio .innerHTML = gerarNumeroAleatorio();
+elementoNumeroAleatorio.innerHTML = gerarNumeroAleatorio();
+
+//cronometro
+
+const elementoCronometroMinutos = document.getElementById("cronometro-minuto");
+const elementoCronometroSegundos = document.getElementById("cronometro-segundo");
+
 
 
