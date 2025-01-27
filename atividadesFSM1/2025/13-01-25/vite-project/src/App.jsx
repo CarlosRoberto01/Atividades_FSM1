@@ -1,14 +1,35 @@
 import './App.css'
+import Footer from './components/Footer.jsx'
+import Navbar from './components/Navbar.jsx'
+import Card from './components/Card';
+import About from './components/About';
+import ContadorDeLike from './components/ContadorDeLike.jsx'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import Login from './components/Login';
 
 
 function App() {
 
   return (
-    <>
-      <h1>Olá, mundo!</h1>
-      <p>Este é meu primeiro projeto com React + vite.</p>
-      <p>Carlos Roberto</p>
-    </>
+    // <>
+    //   <Navbar />
+    //   <Card />
+    //   <ContadorDeLike />
+    //   <About />
+    //   <Footer />
+    // </>
+
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>  
+        <Route path="/" element={<Login />} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/contador-de-like" element={<ContadorDeLike />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
+
   )
 }
 

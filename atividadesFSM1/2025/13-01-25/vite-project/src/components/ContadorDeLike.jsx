@@ -14,7 +14,7 @@ function ContadorDeLike() {
     return (
         <>
             <h1>Contador de Likes</h1>
-            
+
             <button onClick={incrementarLike}>Curtir</button>
             <p>{likes}</p>
             <button onClick={decrementarLike}>Descurtir</button> <br></br>
