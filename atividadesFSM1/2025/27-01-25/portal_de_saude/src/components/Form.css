@@ -1,0 +1,30 @@
+form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    width: 80%;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

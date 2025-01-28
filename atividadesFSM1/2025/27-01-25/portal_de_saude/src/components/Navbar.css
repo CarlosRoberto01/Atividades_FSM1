@@ -1,0 +1,79 @@
+/* Cabeçalho */
+header {
+    background-color: #2e7d32;
+
+}
+
+header img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Imagem do cabeçalho */
+header img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav li {
+    font-size: 1.2em;
+}
+
+nav a {
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #4caf50;
+}
+
+/* Formulário de pesquisa */
+form.barra-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    padding: 16px;
+}
+
+form input[type="text"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    width: 250px;
+}
+
+form input[type="submit"] {
+    padding: 8px;
+    margin-left: 16px;
+    /* background-color: #002ab4; */
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #66bb6a;
+}

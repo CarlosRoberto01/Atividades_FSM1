@@ -1,0 +1,25 @@
+section#especialistas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+section#especialistas img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+section#especialistas a {
+    color: #2e7d32;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section#especialistas a:hover {
+    text-decoration: underline;
+}
