@@ -9,19 +9,22 @@ function Navbar() {
                     <img src="https://icons.iconarchive.com/icons/erix-subyarko/medical/72/Healthcare-Heart-Love-Care-Health-icon.png" alt="Imagem ilustrativa sobre saúde e bem-estar"></img>
                     <ul>
                         <li>
-                            <a href="#inicio">Início</a>
+                            <a href="/">Início</a>
                         </li>
                         <li>
-                            <a href="#conteudo">Conteúdo</a>
+                            <a href="conteudo1">Assunto 1 </a>
                         </li>
                         <li>
-                            <a href="#videos">Vídeos</a>
+                            <a href="conteudo2">Assunto 2</a>
                         </li>
                         <li>
-                            <a href="#especialistas">Especialistas</a>
+                            <a href="videos">Vídeos</a>
                         </li>
                         <li>
-                            <a href="#contato">Contato</a>
+                            <a href="especialistas">Especialistas</a>
+                        </li>
+                        <li>
+                            <a href="form">Contato</a>
                         </li>
                     </ul>
                     <form className="barra-pesquisa" action="https://www.google.com/search">

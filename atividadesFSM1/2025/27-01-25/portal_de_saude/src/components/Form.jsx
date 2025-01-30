@@ -4,7 +4,8 @@ import "./Form.css";
 function Form() {
     return (
         <>
-            <h2>Formulário de Contato</h2><form className="formulario_cliente" action="#" method="post">
+            <h2 id="fomulario-contato" >Formulário de Contato</h2><form action="#" method="post">
+
                 <label htmlFor="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
 

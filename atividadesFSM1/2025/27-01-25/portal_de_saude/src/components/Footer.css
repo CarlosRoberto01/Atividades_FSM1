@@ -3,11 +3,33 @@ footer {
     color: white;
     font-weight: bold;
     text-align: center;
-    padding: 5px;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 footer a {
     color: white;
     margin: 10px;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #c8e6c9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer a {
+        display: block;
+        margin: 5px 0;
+    }
 }

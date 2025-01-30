@@ -6,6 +6,8 @@ import Videos from './components/Videos';
 import Especialistas from './components/Especialistas';
 import Form from './components/Form';
 import Footer from './components/Footer';
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import Bemvindo from './components/Bemvindo';
 
 
 function App() {
@@ -13,12 +15,17 @@ function App() {
   return (
     <>
     <Navbar />
-    <Conteudo1 />
-    <Conteudo2 />
-    <Videos />
-    <Especialistas/>
-    <Form/>
-    <Footer/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Bemvindo/>} />
+        <Route path="/conteudo1" element={<Conteudo1 />} />
+        <Route path="/conteudo2" element={<Conteudo2 />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/especialistas" element={<Especialistas />} />
+        <Route path="/form" element={<Form />} />
+      </Routes>
+    </BrowserRouter>
+    <Footer />
     </>
   )
 }

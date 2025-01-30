@@ -3,7 +3,7 @@ import "./Conteudo.css";
 function Conteudo1() {
     return (
         <>
-            <h1>Saúde e Bem-Estar</h1><section id="conteudo">
+            <section id="conteudo">
                 <article>
                     <h2>Saúde e Bem-Estar</h2>
                     <img src="https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2021/04/27dd7cddd3c2da4d8b388b00e3c63c22_L-550x550.jpg" alt="Imagem ilustrativa sobre saúde e bem-estar na Agenda 2030 da ONU" />
