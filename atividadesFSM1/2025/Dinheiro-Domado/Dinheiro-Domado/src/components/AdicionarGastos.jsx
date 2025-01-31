@@ -1,18 +1,52 @@
+import { useState } from 'react';
 import './AdicionarGastos.css';
 
 
 function AdicionarGastos() {
+
+  //atualiza o estado do formulario
+  const [formData, setFormData] = useState({
+    descricao: '',
+    categoria: '',
+    valor: '',
+    data: ''
+  });
+
+  //atualiza o estado da lista de gastos
+  const [gastos, setGastos] = useState([]);
+
+  //atualiza o estado do formulario
+  const attFormulario = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  //adiciona os dados do formulario a lista de gastos
+  const adcDadosFormALista = (e) => {
+    e.preventDefault();
+    setGastos([...gastos, formData]);
+    setFormData({
+      descricao: '',
+      categoria: '',
+      valor: '',
+      data: ''
+    });
+  };
+
   return (
+
     <div className="AdicionarGastos">
       <h1>Adicionar Gastos</h1>
-      <form>
-      
-        <label htmlFor='nome' >Descrição</label>
-        <input type="text"  id='descricao' placeholder="Descrição" />   
+      <form  onSubmit={adcDadosFormALista}>
 
-        <label htmlFor='Categoria'>Categoria</label>
-        <select id='categoria' name='categoria' 
-        required>
+        <label htmlFor='descricao'>Descrição</label>
+        <input type="text" id='descricao' name='descricao' value={formData.descricao} onChange={attFormulario} placeholder="Descrição" />
+
+        <label htmlFor='categoria'>Categoria</label>
+        <select id='categoria' name='categoria' value={formData.categoria} onChange={attFormulario} required>
           <option value=''>Selecione</option>
           <option value='alimentacao'>Alimentação</option>
           <option value='contas'>Contas de Casa</option>
@@ -22,14 +56,11 @@ function AdicionarGastos() {
           <option value='outros'>Outros</option>
         </select>
 
-        <label></label>
-
         <label htmlFor="valor">Valor:</label>
-        <input type="text" placeholder="Valor" />
-
+        <input type="text" id="valor" name="valor" value={formData.valor} onChange={attFormulario} placeholder="Valor" />
 
         <label htmlFor="data">Data:</label>
-        <input type="date" id="data" name="data" required />
+        <input type="date" id="data" name="data" value={formData.data} onChange={attFormulario} required />
 
         <button type="submit">Adicionar</button>
       </form>
